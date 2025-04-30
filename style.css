@@ -52,9 +52,9 @@ button {
 	color: #fff;
 }
 
-button:hover, #cursosRealizados a {
+button:hover, #cursosRealizados a:hover, .download-btn:hover {
 	opacity: 0.8;
-} 
+}
 
 li {
 	list-style: none;
@@ -72,11 +72,16 @@ li {
 	color: #fff;
 }
 
-.download-btn a {
-	text-decoration: none;
+.download-btn {
+	background: linear-gradient(45deg, #4c7bf6, #a61342);
 	color: #fff;
-
+	padding: 1rem 3rem;
+	border-radius: 30px;
+	margin-top: 1.5rem;
+	border: none;
+	text-decoration: none;
 }
+
 .container {
 	display: flex;
 	justify-content: space-evenly;
@@ -208,14 +213,7 @@ li {
 	font-size: 12px;
 }
 
-.download-btn {
-	background: linear-gradient(45deg, #4c7bf6, #a61342);
-	color: #fff;
-	padding: 1rem 3rem;
-	border-radius: 30px;
-	margin-top: 1.5rem;
-	border: none;
-}
+
 
 .main-container {
 	background-color: #111111eb;;
