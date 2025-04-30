@@ -9,6 +9,13 @@
 	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
+	<div class="navbar" id="navbar">
+		<a href="#exp">Experiencia</a>
+		<a href="#skills">Habilidades</a>
+		<a href="#projects">Proyectos</a>
+		<a href="#contact">Contacto</a>
+		<a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">☰</a>
+	</div>
 	<div class="container">
 		<div class="profile-card">
 			<div class="profile-pic">
@@ -49,7 +56,7 @@
 		</div>
 
 		<div class="main-container">
-			<section class="box">
+			<section id="education" class="box">
 				<h2>Educación</h2>
 				<div class="desc">
 					<h3>Universidad tecnológica nacional</h3>
@@ -58,10 +65,10 @@
 				</div>
 				<div class="desc">
 					<h3>Universidad tecnológica nacional</h3>
-					<p><strong>Institución:</strong> Tecnicatura universitaria en programación </p>
+					<p><strong>Título:</strong> Tecnicatura universitaria en programación </p>
 					<p><strong>Estado:</strong> En curso</p>
 				</div>
-				<div class="desc">
+				<div class="container-cursos">
 					<button onclick="toggleCursos()">Cursos realizados</button>
 					<div id="cursosRealizados">
 						<ul>
@@ -70,7 +77,7 @@
 									<h3>Linux: Linea de comandos y shell script</h3>
 									<p><strong>Empresa emisora:</strong> Udemy</p>
 									<p><strong>Credencial:</strong> UC-7241d062-4184-44e1-8a0b-959ecc9203ad</p>
-									<a target="_blank" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-7241d062-4184-44e1-8a0b-959ecc9203ad.pdf"> Certificado </a>
+									<a target="_blank" href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-7241d062-4184-44e1-8a0b-959ecc9203ad.pdf" class="button"> Certificado </a>
 								</div>
 							</li>
 							<li>
@@ -94,7 +101,7 @@
 				</div>
 			</section>
 
-			<section class="box">
+			<section id="exp" class="box">
 				<h2>Experiencia Laboral</h2>
 
 				<div class="experience">
@@ -103,12 +110,12 @@
 					<p><strong>Periodo:</strong> 2022 - Actual</p>
 					<p>
 						<ul>
-							<li>Lógica de matcheo de anuncios publicitarios en tiempo real.</li>
-							<li>APIs REST y endpoints mediante modelos modulares.</li>
-							<li>CRUD mediante modelos por capas y MVC.</li>
-							<li>Creación de scripts para desplegar procesos automáticos.</li>
-							<li>Generación de reportes estadísticos automatizados (consultas avanzadas).</li>
-							<li>Testing API/unitarios/integrales.</li>
+							<li>- Lógica de matcheo de anuncios publicitarios en tiempo real.</li>
+							<li>- APIs REST y endpoints mediante modelos modulares.</li>
+							<li>- CRUD mediante modelos por capas y MVC.</li>
+							<li>- Creación de scripts para desplegar procesos automáticos.</li>
+							<li>- Generación de reportes estadísticos automatizados (consultas avanzadas).</li>
+							<li>- Testing API/unitarios/integrales.</li>
 						</ul>
 						<div class="skills">
 							<span class="skill-button">Perl</span>
@@ -127,7 +134,7 @@
 				</div>
 			</section>
 
-			<section class="box">
+			<section id="skills" class="box">
 				<h2>Habilidades</h2>
 				<div class="skills">
 					<span class="skill-button">HTML/CSS</span>
@@ -144,7 +151,7 @@
 				</div>
 			</section>
 
-			<section class="box">
+			<section id="projects" class="box">
 				<h2>Proyectos</h2>
 				<div class="project">
 					<h3>Proyecto 1</h3>

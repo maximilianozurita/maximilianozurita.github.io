@@ -16,7 +16,6 @@
 
 body {
 	background: linear-gradient(45deg, var(--purple), var(--purple-light));
-	
 }
 
 footer {
@@ -49,11 +48,11 @@ button {
 	cursor: pointer;
 	transition: background-color 0.3s;
 	border-radius: 5px;
-	background: linear-gradient(45deg, #f64c57, #e21b5a);
+	background: linear-gradient(45deg, #4c7bf6, #a61342);
 	color: #fff;
 }
 
-button:hover {
+button:hover, #cursosRealizados a {
 	opacity: 0.8;
 } 
 
@@ -61,23 +60,37 @@ li {
 	list-style: none;
 }
 
-.download-btn a, #cursosRealizados a {
+#cursosRealizados a {
+	text-decoration: none;
+
+	padding: 0.1rem;
+	font-weight: bold;
+	border: none;
+	transition: background-color 0.3s;
+	border-radius: 5px;
+	background: linear-gradient(45deg, #495154, #10251e61);
+	color: #fff;
+}
+
+.download-btn a {
 	text-decoration: none;
 	color: #fff;
+
 }
 .container {
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	justify-content: space-evenly;
+	align-items: flex-start;
 	min-height: 100%;
 	flex-wrap: wrap;
 	position: relative;
 	width: 100%;
+	margin-top: 30px;
 }
 
 .profile-card {
 	background: #111;
-	width: 400px;
+	width: 500px;
 	padding: 3rem;
 	border-radius: 10px;
 	min-height: 400px;
@@ -176,7 +189,7 @@ li {
 	width: 40px;
 	line-height: 40px;
 	border-radius: 5px;
-	background-color: #111;
+	background-color: #111111eb;
 	text-align: center;
 	color: #fff;
 	transition: 0.5s;
@@ -196,7 +209,7 @@ li {
 }
 
 .download-btn {
-	background: linear-gradient(45deg, #f64c57, #e21b5a);
+	background: linear-gradient(45deg, #4c7bf6, #a61342);
 	color: #fff;
 	padding: 1rem 3rem;
 	border-radius: 30px;
@@ -205,8 +218,8 @@ li {
 }
 
 .main-container {
-	background-color: #111;;
-	max-width: 800px;
+	background-color: #111111eb;;
+	max-width: 1000px;
 	padding: 2rem 3rem;
 	border-radius: 10px;
 }
@@ -235,19 +248,25 @@ li {
 }
 
 .skill-button {
-	background: linear-gradient(45deg, #f64c57, #e21b5a);
+	background: linear-gradient(45deg, #644cf6b8, #1b25e22e);
 	margin: 5px 0;
 	padding: 5px;
 	border-radius: 10px;
-	color: #f2f2f2d9;
+	color: #f2f2f2;
 }
 .project, .experience {
+	width: 100%;
 	background: #1d1d1d;
 	color: var(--text-color);
 	margin: 10px 0;
 	padding: 10px;
 	border-radius: 5px;
 }
+
+.experience p, .experience li{
+	margin-top: 5px;
+}
+
 .main-container .box {
 	display: flex;
 	justify-content: space-between;
@@ -260,19 +279,34 @@ li {
 	flex-direction: column;
 }
 
-.main-container .box .desc {
-	width: 75%;
+.container-cursos {
+	width: 100%;
+	padding: 10px;
 	color: var(--text-color);
 	margin-top: 15px;
+	background: #111;
+	border-radius: 5px;
+}
+
+.main-container .box .desc {
+	width: 100%;
+	padding: 10px;
+	color: var(--text-color);
+	margin-top: 15px;
+	background: #1d1d1d;
+	border-radius: 5px;
 }
 
 .main-container .box .desc h3 {
 	color: #f2f2f2;
 	margin-bottom: 3px;
 }
-
+#exp h3 {
+	color: #f2f2f2;
+	margin-bottom: 3px;
+}
 .main-container .box .desc p {
-	margin: 0px
+	margin-bottom: 5px
 }
 #cursosRealizados {
 	display: none;
@@ -287,7 +321,33 @@ li {
 	width: 300px;
 	height: 85px;
 }
+
+.navbar a {
+	float: left;
+	display: block;
+	color: #f2f2f296;
+	text-align: center;
+	padding: 14px 20px;
+	text-decoration: none;
+}
+.navbar a:hover {
+	opacity: 50%;
+}
+
+.navbar .icon {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 14px 20px;
+	cursor: pointer;
+}
+
+
 @media(max-width: 768px) {
+	.container {
+		justify-content: center;
+	}
 	.main-container {
 		width: 1005;
 		max-width: 400px;
@@ -300,5 +360,12 @@ li {
 	.main-container .work {
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(4,auto);
+	}
+	.navbar a { display: none; float: none; text-align: left; }
+	.navbar.responsive a {
+		display: block;
+	}
+	.navbar .icon {
+		display: block;
 	}
 }

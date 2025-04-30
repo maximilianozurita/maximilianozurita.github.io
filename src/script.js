@@ -2,6 +2,10 @@ function toggleCursos() {
 	const div = document.getElementById('cursosRealizados');
 	div.style.display = div.style.display === 'none' ? 'block' : 'none';
 }
+function toggleNavbar() {
+	const navbar = document.getElementById("navbar");
+	navbar.classList.toggle("responsive");
+}
 
 const form = document.getElementById('contactForm');
 form.addEventListener('submit', function(event) {
