@@ -79,7 +79,7 @@
 				"Analysis and resolution of incidents related to backend processes and report generation.",
 				"Validation of processed data before exposure in dashboards or APIs."
 			],
-			"technologies": ["Python", "Linux", "SQL", "git", "SVN", "javascript", "C", "Lua", "Go", "Perl", "Jira", "HTML", "CSS", "jQuery", "Claude Code"],
+			"technologies": ["Python", "Linux", "SQL", "git", "SVN", "javascript", "C", "Lua", "Go", "Perl", "Jira", "HTML", "CSS", "jQuery", "Claude Code"]
 			},
 		{
 			"id": "exp2",
@@ -135,7 +135,7 @@
 				"Preparation of FMEA (Failure Mode and Effect Analysis).",
 				"Definition and monitoring of KPI indicators for the production process."
 			],
-			"technologies": ["Excel", "Power Bi", "Solid work", "AutoCad"],
+			"technologies": ["Excel", "Power Bi", "Solid work", "AutoCad"]
 			}
 	],
 	"certifications": [

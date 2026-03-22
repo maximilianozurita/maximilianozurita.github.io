@@ -79,7 +79,7 @@
 				"Análisis y resolución de incidencias relacionadas con procesos backend y generación de reportes.",
 				"Validación de datos procesados antes de su exposición en dashboards o APIs."
 			],
-			"technologies": ["Python", "Linux", "SQL", "git", "SVN", "javascript", "C", "Lua", "Go", "Perl", "Jira", "HTML", "CSS", "jQuery", "Claude Code"],
+			"technologies": ["Python", "Linux", "SQL", "git", "SVN", "javascript", "C", "Lua", "Go", "Perl", "Jira", "HTML", "CSS", "jQuery", "Claude Code"]
 			},
 		{
 			"id": "exp2",
@@ -135,7 +135,7 @@
 				"Elaboración de AMFE (Análisis de Modo y Efecto de Fallas).",
 				"Definición y seguimiento de indicadores KPI del proceso productivo."
 			],
-			"technologies": ["Excel", "Power Bi", "Solid work", "AutoCad"],
+			"technologies": ["Excel", "Power Bi", "Solid work", "AutoCad"]
 			}
 	],
 	"certifications": [
