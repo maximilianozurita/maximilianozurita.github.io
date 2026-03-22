@@ -49,7 +49,7 @@ body {
 /* ===== LAYOUT ===== */
 .layout {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: 1fr 340px;
   min-height: 100vh;
 }
 
@@ -57,10 +57,6 @@ body {
 .sidebar {
   background: var(--sidebar-bg);
   border-left: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow-y: auto;
   transition: var(--transition);
 }
 
@@ -233,6 +229,7 @@ body.light-mode .tag {
 .main-content {
   padding: 40px 48px;
   max-width: 960px;
+  margin: 0 auto;
 }
 
 /* ===== SECTION ===== */
@@ -396,6 +393,34 @@ body.light-mode .tag {
   color: var(--accent);
   font-size: 10px;
   top: 2px;
+}
+
+/* ===== SIDEBAR SKILLS ===== */
+.sidebar-skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  transition: border-color 0.2s, var(--transition);
+}
+
+.sidebar-skill-group:hover { border-color: var(--accent); }
+
+.sidebar-skill-category {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
 }
 
 /* ===== SKILLS GRID ===== */

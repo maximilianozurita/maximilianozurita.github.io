@@ -30,14 +30,13 @@ const UI_STRINGS = {
     sections: {
       summary: 'Resumen',
       experience: 'Experiencia',
-      skills: 'Skills Técnicos',
       education: 'Educación',
       certifications: 'Certificaciones',
     },
     sidebar: {
       location: 'Ubicación',
       languages: 'Idiomas',
-      softSkills: 'Soft Skills',
+      skills: 'Skills',
     },
     exp: {
       technologies: 'Tecnologías',
@@ -61,14 +60,13 @@ const UI_STRINGS = {
     sections: {
       summary: 'Summary',
       experience: 'Experience',
-      skills: 'Technical Skills',
       education: 'Education',
       certifications: 'Certifications',
     },
     sidebar: {
       location: 'Location',
       languages: 'Languages',
-      softSkills: 'Soft Skills',
+      skills: 'Skills',
     },
     exp: {
       technologies: 'Technologies',
@@ -103,12 +101,11 @@ function updateStaticUI(lang) {
   document.documentElement.lang = lang;
   document.getElementById('title-summary').textContent = ui.sections.summary;
   document.getElementById('title-experience').textContent = ui.sections.experience;
-  document.getElementById('title-skills').textContent = ui.sections.skills;
   document.getElementById('title-education').textContent = ui.sections.education;
   document.getElementById('title-certifications').textContent = ui.sections.certifications;
   document.getElementById('sidebar-label-location').textContent = ui.sidebar.location;
   document.getElementById('sidebar-label-languages').textContent = ui.sidebar.languages;
-  document.getElementById('sidebar-label-softskills').textContent = ui.sidebar.softSkills;
+  document.getElementById('sidebar-label-skills').textContent = ui.sidebar.skills;
   syncLangButtons();
 }
 
@@ -147,10 +144,15 @@ function renderSidebar(data) {
     </div>
   `).join('');
 
-  const ssEl = document.getElementById('soft-skills');
-  ssEl.innerHTML = (data.soft_skills || []).map(s =>
-    `<span class="tag">${s}</span>`
-  ).join('');
+  const ui = UI_STRINGS[currentLang];
+  const skillsEl = document.getElementById('sidebar-skills');
+  const skills = data.technical_skills || {};
+  skillsEl.innerHTML = Object.entries(skills).map(([key, values]) => `
+    <div class="sidebar-skill-group">
+      <div class="sidebar-skill-category">${ui.categories[key] || key}</div>
+      <div class="tags">${values.map(v => `<span class="tag">${v}</span>`).join('')}</div>
+    </div>
+  `).join('');
 }
 
 function renderSummary(data) {
@@ -218,19 +220,6 @@ window.toggleResp = function(listId, fadeId, btnId) {
   btn.textContent = expanded ? ui.exp.showLess : ui.exp.showMore;
 };
 
-function renderSkills(data) {
-  const ui = UI_STRINGS[currentLang];
-  const container = document.getElementById('skills-grid');
-  const skills = data.technical_skills || {};
-  container.innerHTML = Object.entries(skills).map(([key, values]) => `
-    <div class="skill-card">
-      <div class="skill-category">${ui.categories[key] || key}</div>
-      <div class="skill-tags">
-        ${values.map(v => `<span class="skill-tag">${v}</span>`).join('')}
-      </div>
-    </div>
-  `).join('');
-}
 
 function renderEducation(data) {
   const container = document.getElementById('education-list');
@@ -268,7 +257,6 @@ function renderAll(data) {
   renderSidebar(data);
   renderSummary(data);
   renderExperience(data);
-  renderSkills(data);
   renderEducation(data);
   renderCertifications(data);
 }
